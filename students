@@ -1,0 +1,91 @@
+\d
+\l
+\l
+\c students;
+\d
+\d students();
+SELECT * FROM students;
+SELECT * FROM students;
+SELECT first_name FROM students;
+SELECT first_name, last_name, gpa FROM students;
+SELECT first_name, last_name, gpa FROM students WHERE gpa<2.5;
+SELECT first_name, last_name, gpa FROM students WHERE gpa>=3.8;
+SELECT first_name, last_name, gpa FROM students WHERE gpa!=4.0;
+clear
+SELECT * FROM majors
+;
+SELECT * FROM majors;
+SELECT * FROM majors WHERE major=Game Design;
+SELECT * FROM majors WHERE major='Game Design';
+SELECT * FROM majors WHERE major!='Game Design';
+SELECT * FROM majors WHERE major>'Game Design';
+SELECT * FROM majors WHERE major>='Game Design';
+SELECT * FROM majors WHERE major>='G';
+SELECT * FROM majors WHERE major<'G';
+SELECT * from students;
+SELECT * from students WHERE last_name<'M';
+SELECT * from students WHERE last_name<'M' AND gpa=3.9;
+SELECT * from students WHERE last_name<'M' OR gpa=3.9 AND ;
+SELECT * from students WHERE last_name<'M' AND gpa=3.9;
+SELECT * from students WHERE last_name<'M' AND gpa<2;
+SELECT * from students WHERE last_name<'M' AND gpa=3.9 OR gpa<2.3;
+SELECT * from students WHERE last_name<'M' AND gpa=3.9 OR gpa<2.3;
+SELECT * from students WHERE last_name<'M' AND (gpa=3.9 OR gpa<2.3);
+SELECT * FROM courses;
+SELECT * FROM courses WHERE course LIKE '_lgorithm';
+SELECT * FROM courses WHERE course LIKE '_lgorithms';
+SELECT * FROM courses WHERE course LIKE '%lgorithms';
+SELECT * FROM courses WHERE course LIKE 'Web_';
+SELECT * FROM courses WHERE course LIKE 'Web';
+SELECT * FROM courses WHERE course LIKE 'Web*';
+SELECT * FROM courses WHERE course LIKE 'Web+';
+SELECT * FROM courses WHERE course LIKE 'Web%';
+SELECT * FROM courses WHERE course LIKE '_e%';
+SELECT * FROM courses WHERE course LIKE 'e%';
+SELECT * FROM courses WHERE course LIKE '% %';
+SELECT * FROM courses WHERE course NOT LIKE '% %';
+SELECT * FROM courses WHERE course NOT LIKE '%A%';
+SELECT * FROM courses WHERE course LIKE '%A%';
+SELECT * FROM courses WHERE course ILIKE '%A%';
+SELECT * FROM courses WHERE course NOT ILIKE '%A%';
+SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND LIKE '% %'; 
+SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND '% %'; 
+SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND '% %';
+SELECT * FROM courses WHERE course NOT ILIKE '%A%' '% %';
+SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';
+SELECT last_name FROM students WHERE last_name ILIKE '%sa%' AND last_name LIKE '_r';
+SELECT last_name FROM students WHERE last_name ILIKE 'sa' AND last_name LIKE '_r';
+SELECT last_name FROM students WHERE last_name ILIKE 'sa' AND last_name LIKE '%r_';
+SELECT last_name FROM students WHERE last_name ILIKE '%sa%' AND last_name LIKE '%r_';
+SELECT * FROM students
+;
+SELECT * FROM students
+;
+SELECT * FROM students;
+SELECT * FROM students WHERE gpa IS NULL;
+SELECT * FROM students WHERE gpa IS NOT NULL;
+SELECT * FROM students WHERE major IS NULL;
+SELECT * FROM students WHERE major_id IS NULL;
+SELECT * FROM students WHERE major_id IS NULL AND gpa IS NULL;
+SELECT * FROM students WHERE major_id IS NULL AND gpa IS NOT NULL;
+SELECT * FROM students WHERE major_id IS NULL AND gpa IS NULL;
+SELECT first_name, last_name, gpa FROM students WHERE major IS NULL AND (first_name LIKE 'D%' OR gpa>3.0);
+SELECT * FROM students ORDER BY gpa;
+SELECT * FROM students ORDER BY gpa DESC;
+SELECT * FROM students ORDER BY gpa, first_name;
+SELECT * FROM students ORDER BY gpa DESC, first_name;
+SELECT * FROM students ORDER BY gpa DESC, first_name LIMIT 10;
+SELECT * FROM students WHERE gpa IS NOT NULL ORDER BY gpa DESC, first_name LIMIT 10; 
+SELECT * FROM courses;
+SELECT * FROM course WHERE course LIKE '_e%' OR course LIKE '%s' ORDER BY course DESC LIMIT 5;
+SELECT * FROM courses WHERE course LIKE '_e%' OR course LIKE '%s' ORDER BY course DESC LIMIT 5;
+SELECT MIN(gpa) FROM students;
+SELECT first_name, last_name, major_id, MIN(gpa) FROM students;
+SELECT MAX(gpa) FROM students;
+SELECT SUM(major_id FROM students;
+SELECT MAX(gpa) FROM students;
+;
+SELECT SUM(major_id) FROM students;
+\q
+\s students;
+
